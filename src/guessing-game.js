@@ -8,15 +8,15 @@ class GuessingGame {
     }
     
     guess() {
-      return this.expected = Math.floor(Math.random() * (this.max - this.min)) + this.min;
+      return this.medium = Math.round((this.min + this.max) / 2)
     }
 
     lower() {
-      this.max = Math.floor((this.min + this.max) / 2)
+      this.max = this.medium 
     }
 
     greater() {
-      this.min = Math.floor((this.min + this.max) / 2)
+      this.min = this.medium
     }
 }
 
